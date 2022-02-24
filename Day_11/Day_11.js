@@ -1,81 +1,81 @@
-// // https와 http2 모듈
-// //     https 모듈은 웹 서버에 ssl 암호화 추가
+// https와 http2 모듈
+//     https 모듈은 웹 서버에 ssl 암호화 추가
 
-// //     기존 http 서버 코드
-// //     const http = require('http');
+//     기존 http 서버 코드
+//     const http = require('http');
 
-// //     const server = http.createServer((req, res) => {
-// //         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-// //         res.write('<h1>Hello Sangkwon!</h1>');
-// //         res.end('<p>Hello Node!</p>');
-// //     })
-// //         .listen(8080);
-// //     server.on('listening', () => {
-// //         console.log('8080번 포트에서 서버 대기 중입니다!');
-// //     });
+//     const server = http.createServer((req, res) => {
+//         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+//         res.write('<h1>Hello Sangkwon!</h1>');
+//         res.end('<p>Hello Node!</p>');
+//     })
+//         .listen(8080);
+//     server.on('listening', () => {
+//         console.log('8080번 포트에서 서버 대기 중입니다!');
+//     });
 
-// //     여기에서 https를 사용하려면 인증 기관에서 인증서 발급
+//     여기에서 https를 사용하려면 인증 기관에서 인증서 발급
 
-// //     const https = require('https'); https 모듈로 변경
-// //     const fs = require('fs');
+//     const https = require('https'); https 모듈로 변경
+//     const fs = require('fs');
 
-// //     https.createServer({ 첫 번째 인수로 인증서 관련 옵션을 넣어줌
-// //         pem이나 crt, key 확장자 파일을 옵션에 맞게 입력
+//     https.createServer({ 첫 번째 인수로 인증서 관련 옵션을 넣어줌
+//         pem이나 crt, key 확장자 파일을 옵션에 맞게 입력
 
-// //         cert: fs.readFileSync('도메인 인증서 경로'),
-// //         key: fs.readFileSync('도메인 비밀키 경로'),
-// //         ca: [
-// //             fs.readFileSync('상위 인증서 경로'),
-// //             fs.readFileSync('상위 인증서 경로'),
-// //           ],
-// //         }, (req, res) => {
-// //             res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-// //             res.write('<h1>Hello Node!</h1>');
-// //             res.end('<p>Hello Server!</p>');
-// //         })
-// //             .listen(443, () => {
-// //                 실제 서버에서 80 포트가 아닌 443 포트 이용                
-// //                 console.log('443번 포트에서 서버 대기 중입니다!');
-// //             });
+//         cert: fs.readFileSync('도메인 인증서 경로'),
+//         key: fs.readFileSync('도메인 비밀키 경로'),
+//         ca: [
+//             fs.readFileSync('상위 인증서 경로'),
+//             fs.readFileSync('상위 인증서 경로'),
+//           ],
+//         }, (req, res) => {
+//             res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+//             res.write('<h1>Hello Node!</h1>');
+//             res.end('<p>Hello Server!</p>');
+//         })
+//             .listen(443, () => {
+//                 실제 서버에서 80 포트가 아닌 443 포트 이용                
+//                 console.log('443번 포트에서 서버 대기 중입니다!');
+//             });
 
-// //     http2 모듈은 ssl 암호화와 더불어 http/2 프로토콜을 사용할 수 있음
-// //     http/2는 요청 및 응답 방식이 기존 http/1.1 보다 개선되어 훨씬 효율적으로 요청 가능
+//     http2 모듈은 ssl 암호화와 더불어 http/2 프로토콜을 사용할 수 있음
+//     http/2는 요청 및 응답 방식이 기존 http/1.1 보다 개선되어 훨씬 효율적으로 요청 가능
 
-// //     // https://sangkwon2406.tistory.com/77
+//     // https://sangkwon2406.tistory.com/77
 
-// //     const http2 = require('https'); https 모듈로 변경
-// //     const fs = require('fs');
+//     const http2 = require('https'); https 모듈로 변경
+//     const fs = require('fs');
 
-// //     https.createSecureServer({ 첫 번째 인수로 인증서 관련 옵션을 넣어줌
-// //         pem이나 crt, key 확장자 파일을 옵션에 맞게 입력
-// //         cert: fs.readFileSync('도메인 인증서 경로'),
-// //         key: fs.readFileSync('도메인 비밀키 경로'),
-// //         ca: [
-// //             fs.readFileSync('상위 인증서 경로'),
-// //             fs.readFileSync('상위 인증서 경로'),
-// //           ],
-// //         }, (req, res) => {
-// //             res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-// //             res.write('<h1>Hello Node!</h1>');
-// //             res.end('<p>Hello Server!</p>');
-// //         })
-// //             .listen(443, () => {
-// //                 실제 서버에서 80 포트가 아닌 443 포트 이용                
-// //                 console.log('443번 포트에서 서버 대기 중입니다!');
-// //             });
+//     https.createSecureServer({ 첫 번째 인수로 인증서 관련 옵션을 넣어줌
+//         pem이나 crt, key 확장자 파일을 옵션에 맞게 입력
+//         cert: fs.readFileSync('도메인 인증서 경로'),
+//         key: fs.readFileSync('도메인 비밀키 경로'),
+//         ca: [
+//             fs.readFileSync('상위 인증서 경로'),
+//             fs.readFileSync('상위 인증서 경로'),
+//           ],
+//         }, (req, res) => {
+//             res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+//             res.write('<h1>Hello Node!</h1>');
+//             res.end('<p>Hello Server!</p>');
+//         })
+//             .listen(443, () => {
+//                 실제 서버에서 80 포트가 아닌 443 포트 이용                
+//                 console.log('443번 포트에서 서버 대기 중입니다!');
+//             });
     
-// // cluster
-// //     http2 적용하면서 같이 적용해서 배포
-// //     > 서버가 싱글스레드라서 코어를 하나만 차지하는 데
-// //     cpu 코어를 모두 사용할 수 있게 해주는 모듈
+// cluster
+//     http2 적용하면서 같이 적용해서 배포
+//     > 서버가 싱글스레드라서 코어를 하나만 차지하는 데
+//     cpu 코어를 모두 사용할 수 있게 해주는 모듈
 
-// //     cluster를 이용해서 코어 하나당 노드 프로세스 하나가 돌아가게 함 
-// //     단, 워커 스레드(Day_6) 때처럼  코어 갯수만큼의 성능 개선은 아님
-// //     cluster는 프로세스가 여러 개 생기는 거라서 메모리나 세션 등 컴퓨터 자원을 공유하지 못함
-// //     * 하나의 프로세스 내부에 여러 스레드는 자원을 공유할 수 있음
-// //     로그인 구현 시 서버 8개가 돌아갈 때 하나의 서버에서 로그인이 유지되는 게 아님
-// //     새로고침의 경우 로그인이 되어있는 서버가 랜덤으로 결정 > 로그인을 반복해야할 수도 있음
-// //     > 이는 Redis 등 별도의 메모리 서버로 해결
+//     cluster를 이용해서 코어 하나당 노드 프로세스 하나가 돌아가게 함 
+//     단, 워커 스레드(Day_6) 때처럼  코어 갯수만큼의 성능 개선은 아님
+//     cluster는 프로세스가 여러 개 생기는 거라서 메모리나 세션 등 컴퓨터 자원을 공유하지 못함
+//     * 하나의 프로세스 내부에 여러 스레드는 자원을 공유할 수 있음
+//     로그인 구현 시 서버 8개가 돌아갈 때 하나의 서버에서 로그인이 유지되는 게 아님
+//     새로고침의 경우 로그인이 되어있는 서버가 랜덤으로 결정 > 로그인을 반복해야할 수도 있음
+//     > 이는 Redis 등 별도의 메모리 서버로 해결
 
 //     const cluster = require('cluster');
 //     const http = require('http');
