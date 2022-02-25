@@ -94,13 +94,13 @@
 //     기타 명령어
 //         npm outdated
 //             업데이트할 수 있는 패키지가 있는 지 확인
-//             sangkwon@sangkwon-ZenBook-UX534FAC-UX534FA:~/Refactoring_Bookdam_server$ npm outdated
-//             Package        Current  Wanted  Latest  Location                    Depended by
-//             axios           0.24.0  0.24.0  0.26.0  node_modules/axios          Refactoring_Bookdam_server
-//             dotenv          10.0.0  10.0.0  16.0.0  node_modules/dotenv         Refactoring_Bookdam_server
-//             express         4.17.2  4.17.3  4.17.3  node_modules/express        Refactoring_Bookdam_server
-//             sequelize       6.12.4  6.16.2  6.16.2  node_modules/sequelize      Refactoring_Bookdam_server
-//             sequelize-cli    6.3.0   6.4.1   6.4.1  node_modules/sequelize-cli  Refactoring_Bookdam_server
+//             예시
+//                 Package        Current  Wanted  Latest  Location                    Depended by
+//                 axios           0.24.0  0.24.0  0.26.0  node_modules/axios          Refactoring_Bookdam_server
+//                 dotenv          10.0.0  10.0.0  16.0.0  node_modules/dotenv         Refactoring_Bookdam_server
+//                 express         4.17.2  4.17.3  4.17.3  node_modules/express        Refactoring_Bookdam_server
+//                 sequelize       6.12.4  6.16.2  6.16.2  node_modules/sequelize      Refactoring_Bookdam_server
+//                 sequelize-cli    6.3.0   6.4.1   6.4.1  node_modules/sequelize-cli  Refactoring_Bookdam_server
 
 //             current랑 wanted가 다르면 업데이트가 필요함
 //             npm update 하면 업데이트 가능한 모든 패키지가 업데이트됨
